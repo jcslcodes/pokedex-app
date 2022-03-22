@@ -20,7 +20,7 @@ export class PokemonlistComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
+    
     this.pokemonService.getAllPokemons()
       .subscribe( pokemons => {
         this.pokemons = pokemons;
@@ -39,6 +39,7 @@ export class PokemonlistComponent implements OnInit {
   onSearchPokemon (search: string) {
     this.page = 0;
     this.search = search;
+    //console.log(this.search);
   }
 
 }
